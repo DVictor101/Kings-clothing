@@ -1,11 +1,21 @@
 import "./App.css";
-import Directory from "./components/directory/directory";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/homepage/homePage";
+import Header from "./components/header/header";
+import ShopPage from "./pages/shoppage/shopPage";
 
 const App = () => {
-
  return (
-  <div className="App">
-   <Directory/>
+  <div>
+   <Header />
+   <Routes>
+    <Route
+     index="true"
+     path="/"
+     element={<HomePage />}
+    />
+    <Route path="shop" element={<ShopPage />} />
+   </Routes>
   </div>
  );
 };
