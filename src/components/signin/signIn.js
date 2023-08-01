@@ -4,7 +4,7 @@ import FormInput from "../form-input/formInput";
 import CustomButton from "../custom-button/custumButton";
 
 import {
- CreateUserDocument,
+
  signInWithGoogleRedirect,
  SignInUserWithEmailAndPassword,
 } from "../../firebase/firebase";
@@ -15,22 +15,10 @@ const initalFormFields = {
 };
 
 const SignIn = () => {
- /*useEffect(() => {
-  const fetchData = async () => {
-   const response = await getRedirectResult(
-    Authentication
-   );
-   console.log(response);
-   if (response) {
-    await CreateUserDocument(response.user);
-   }
-  };
-  fetchData();
- }, []);*/
  const SignInWithGoogle = async () => {
-  const { user } =
+  
    await signInWithGoogleRedirect();
-  await CreateUserDocument(user);
+ 
  };
 
  const [Formfields, setFormfields] = useState(
@@ -38,6 +26,8 @@ const SignIn = () => {
  );
  const { email, password } = Formfields;
 
+ //const { setCurrentUser } =
+ //useContext(UserContext);
  const resetFormFields = () => {
   setFormfields(initalFormFields);
  };
@@ -46,13 +36,11 @@ const SignIn = () => {
   event.preventDefault();
 
   try {
-   const response =
-    await SignInUserWithEmailAndPassword(
-     email,
-     password
-    );
-
-   console.log(response);
+   await SignInUserWithEmailAndPassword(
+    email,
+    password
+   );
+   // setCurrentUser(user)
    resetFormFields();
   } catch (err) {
    if (err.code === "auth/wrong-password") {
@@ -103,7 +91,8 @@ const SignIn = () => {
      <CustomButton type="submit">
       Sign In{" "}
      </CustomButton>
-     <CustomButton type="button"
+     <CustomButton
+      type="button"
       buttonType="google"
       onClick={SignInWithGoogle}
      >

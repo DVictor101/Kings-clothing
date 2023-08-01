@@ -1,4 +1,10 @@
+import Shop from "../../components/shop/shop";
+
 const ShopPage = () => {
- return <div>ShopPage</div>;
+ return (
+  <div>
+   <Shop />
+  </div>
+ );
 };
 export default ShopPage;
