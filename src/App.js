@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/homepage/homePage";
 import Header from "./components/header/header";
 import ShopPage from "./pages/shoppage/shopPage";
-import SignIn from "./pages/registration/signin";
+import Registration from "./pages/registration/registration";
 
 const App = () => {
  return (
@@ -16,7 +16,7 @@ const App = () => {
      element={<HomePage />}
     />
     <Route path="shop" element={<ShopPage />} />
-    <Route path="/signin" element={<SignIn />} />
+    <Route path="/signin" element={<Registration />} />
    </Routes>
   </div>
  );
