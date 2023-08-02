@@ -10,7 +10,7 @@ import { CartContext } from "../../context/cartContext";
 
 const Header = () => {
  const { currentUser } = useContext(UserContext);
- console.log(currentUser);
+ 
  const { isCartOpen } = useContext(CartContext);
 
  return (

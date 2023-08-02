@@ -21,7 +21,6 @@ export const UserProvider = ({ children }) => {
     if (user) {
      CreateUserDocument(user);
     }
-    console.log(user);
     setCurrentUser(user);
    }
   );

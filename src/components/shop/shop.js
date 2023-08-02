@@ -7,18 +7,14 @@ const Shop = () => {
  const { shopData } = useContext(ShopDataContext);
  return (
   <div className="shop">
-   {shopData.map(
-    ({ id, name, imageUrl, price }) => {
-     return (
-      <ShopProducts
-       id={id}
-       name={name}
-       imageUrl={imageUrl}
-       price={price}
-      />
-     );
-    }
-   )}
+   {shopData.map((product) => {
+    return (
+     <ShopProducts
+      key={product.id}
+      product={product}
+     />
+    );
+   })}
   </div>
  );
 };
