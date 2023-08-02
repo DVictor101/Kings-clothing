@@ -1,22 +1,17 @@
 import "./shop.scss";
-import { useContext } from "react";
-import { ShopDataContext } from "../../context/ShotDataContext";
-import ShopProducts from "../shopData/shopProduct";
+import { Route, Routes } from "react-router-dom";
+import CategoriesPreview from "../../pages/categoriesPreview/CategoriesPreview";
+import CategoryList from "../../pages/categoryList/categoryList";
 
 const Shop = () => {
- const { shopData } = useContext(ShopDataContext);
  return (
-  <div className="shop">
-   {shopData.map((product) => {
-    return (
-     <ShopProducts
-      key={product.id}
-      product={product}
-     />
-    );
-   })}
-  </div>
+  <Routes>
+   <Route index element={<CategoriesPreview />} />
+   <Route
+    path=":categorylist"
+    element={<CategoryList />}
+   />
+  </Routes>
  );
 };
-
 export default Shop;

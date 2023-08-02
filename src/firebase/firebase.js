@@ -14,6 +14,10 @@ import {
  doc,
  getDoc,
  setDoc,
+ collection,
+ writeBatch,
+ query,
+ getDocs,
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -35,6 +39,46 @@ const app = initializeApp(firebaseConfig);
 
 const provider = new GoogleAuthProvider();
 const database = getFirestore(app);
+export const addCollectionDocument = async (
+ collectionKey,
+ addedObject
+) => {
+ const collectionReference = collection(
+  database,
+  collectionKey
+ );
+ const batch = writeBatch(database);
+ addedObject.forEach((object) => {
+  const docRef = doc(
+   collectionReference,
+   object.title.toLowerCase()
+  );
+  batch.set(docRef, object);
+ });
+
+ await batch.commit();
+ console.log("done");
+};
+
+export const getCategoryAndDocument =
+ async () => {
+  const collectionReference = collection(
+   database,
+   "categories"
+  );
+  const q = query(collectionReference);
+
+  const querySnapshot = await getDocs(q);
+  const categoryMap = querySnapshot.docs.reduce(
+   (acc, docSnapshot) => {
+    const { title, items } = docSnapshot.data();
+    acc[title.toLowerCase()] = items;
+    return acc;
+   },
+   {}
+  );
+  return categoryMap;
+ };
 
 provider.setCustomParameters({
  prompt: "select_account",
