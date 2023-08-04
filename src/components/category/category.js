@@ -1,7 +1,20 @@
 import "./category.scss";
-const Category = ({ title, id, imageUrl }) => {
+import { useNavigate } from "react-router-dom";
+
+const Category = ({
+ title,
+ id,
+ imageUrl,
+ route,
+}) => {
+ const navigate = useNavigate();
+ const onNavigate = () => navigate(route);
  return (
-  <div key={id} className="category-conainert">
+  <div
+   key={id}
+   className="category-conainert"
+   onClick={onNavigate}
+  >
    <div
     style={{
      backgroundImage: `url(${imageUrl})`,

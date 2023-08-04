@@ -4,7 +4,6 @@ import FormInput from "../form-input/formInput";
 import CustomButton from "../custom-button/custumButton";
 
 import {
-
  signInWithGoogleRedirect,
  SignInUserWithEmailAndPassword,
 } from "../../firebase/firebase";
@@ -16,9 +15,7 @@ const initalFormFields = {
 
 const SignIn = () => {
  const SignInWithGoogle = async () => {
-  
-   await signInWithGoogleRedirect();
- 
+  await signInWithGoogleRedirect();
  };
 
  const [Formfields, setFormfields] = useState(

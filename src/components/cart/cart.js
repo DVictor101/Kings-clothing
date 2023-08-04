@@ -1,7 +1,8 @@
-import "./cart.scss";
+import "./cartstyle.scss";
 import { ReactComponent as CartIcon } from "../../Assets/004 shopping-bag.svg";
 import { useContext } from "react";
 import { CartContext } from "../../context/cartContext";
+
 
 const Cart = () => {
  const { isCartOpen, setIsCartOpen, cartCount } =

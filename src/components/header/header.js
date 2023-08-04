@@ -1,28 +1,31 @@
 import { Fragment, useContext } from "react";
-import "./header.scss";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { ReactComponent as Logo } from "../../Assets/304489-ffc107.svg";
 import { UserContext } from "../../context/user.context";
 import { SignOutUser } from "../../firebase/firebase";
 import Cart from "../cart/cart";
 import CartDropDown from "../cartDropDown/cartDropDown";
 import { CartContext } from "../../context/cartContext";
+import {
+ HeaderContainer,
+ LogoContainer,
+ Navigation,
+ NavLink,
+} from "./headerstyle";
 
 const Header = () => {
  const { currentUser } = useContext(UserContext);
- 
+
  const { isCartOpen } = useContext(CartContext);
 
  return (
   <Fragment>
-   <div className="header">
-    <Link className="logo-cont" to="/">
+   <HeaderContainer>
+    <LogoContainer to="/">
      <Logo className="logo" />
-    </Link>
-    <div className="link-cont">
-     <Link className="link" to="/shop">
-      SHOP
-     </Link>
+    </LogoContainer>
+    <Navigation>
+     <NavLink to="/shop">SHOP</NavLink>
      {currentUser ? (
       <span
        onClick={SignOutUser}
@@ -31,15 +34,13 @@ const Header = () => {
        SIGNOUT
       </span>
      ) : (
-      <Link className="link" to="/signin">
-       SIGNIN
-      </Link>
+      <NavLink to="/signin">SIGNIN</NavLink>
      )}
      <Cart />
-    </div>
-    {isCartOpen && <CartDropDown /> }
-   </div>
-   <Outlet />
+    </Navigation>
+    {isCartOpen && <CartDropDown />}
+    <Outlet />
+   </HeaderContainer>
   </Fragment>
  );
 };

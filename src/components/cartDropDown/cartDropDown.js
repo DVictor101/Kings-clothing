@@ -1,4 +1,4 @@
-import "./cartdropdown.scss";
+import "./cartdropdownstyle.scss";
 import CustomButton from "../custom-button/custumButton";
 import CartItem from "../cart-Item/CartItem";
 import { useContext } from "react";
@@ -13,11 +13,17 @@ const CartDropDown = () => {
  };
 
  return (
-  <div className="cart-drop-down">
+  <div className="cart-dropdown-container">
    <div className="cart-items">
-    {cartItems.map((item) => (
-     <CartItem key={item.id} item={item} />
-    ))}
+    {cartItems.length ? (
+     cartItems.map((item) => (
+      <CartItem key={item.id} item={item} />
+     ))
+    ) : (
+     <div className="empty-message">
+      Your Cart is Empty
+     </div>
+    )}
    </div>
    <CustomButton
     buttonType="button"
