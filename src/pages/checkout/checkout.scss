@@ -29,3 +29,22 @@
   font-size: 36px;
  }
 }
+
+@media (max-width: 576px) {
+ /* Styles for mobile phones */
+ .checkout-cont {
+  width: 98%;
+ }
+}
+@media (min-width: 577px) and (max-width: 767px) {
+ /* Styles for small tablets and larger phones */
+ .checkout-cont {
+  width: 95%;
+ }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+ /* Styles for tablets and small laptops */
+ .checkout-cont {
+  width: 80%;
+ }
+}

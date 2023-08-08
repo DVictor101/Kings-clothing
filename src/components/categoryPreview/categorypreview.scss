@@ -25,9 +25,18 @@
 @media (min-width: 577px) and (max-width: 767px) {
  /* Styles for tablets and small laptops */
  .title {
-    font-size: 32px;
-    margin-bottom: 25px;
-    cursor: pointer;
-    margin-left: 30px;
-   }
+  font-size: 32px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  margin-left: 30px;
+ }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+ /* Styles for tablets and small laptops */
+ .title {
+  font-size: 32px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  margin-left: 30px;
+ }
 }

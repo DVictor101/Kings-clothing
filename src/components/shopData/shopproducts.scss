@@ -71,7 +71,23 @@
  .shop-products {
   height: 480px;
   padding: 20px 0;
-  margin: 0 30px
+  margin: 0 30px;
+ }
+ .footer {
+  font-size: 20px;
+  height: 5%;
+ }
+ .name {
+  width: 100%;
+  margin-bottom: 25px;
+ }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+ /* Styles for tablets and small laptops */
+ .shop-products {
+  height: 480px;
+  padding: 20px 0;
+  margin: 0 30px;
  }
  .footer {
   font-size: 20px;

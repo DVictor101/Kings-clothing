@@ -8,14 +8,22 @@
 @media (max-width: 576px) {
  /* Styles for mobile phones */
  .directory {
-    flex-direction: column; 
-    padding: 0 20px;
-   }
+  flex-direction: column;
+  padding: 0 20px;
+ }
 }
 @media (min-width: 577px) and (max-width: 767px) {
  /* Styles for small tablets and larger phones */
  .directory {
-    flex-direction: column; 
-    padding: 0 20px;
-   }
+  flex-direction: column;
+  padding: 0 20px;
+ }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+ /* Styles for tablets and small laptops */
+ .directory {
+  flex-direction: column;
+  padding: 0 20px;
+ }
 }
