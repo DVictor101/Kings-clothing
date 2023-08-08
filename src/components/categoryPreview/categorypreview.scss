@@ -10,8 +10,24 @@
  }
 
  .preview {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
  }
+}
+@media (max-width: 576px) {
+ /* Styles for mobile phones */
+ .preview {
+  display: none;
+ }
+}
+@media (min-width: 577px) and (max-width: 767px) {
+ /* Styles for tablets and small laptops */
+ .title {
+    font-size: 32px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    margin-left: 30px;
+   }
 }

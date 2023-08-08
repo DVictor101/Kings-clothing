@@ -9,3 +9,19 @@
  margin-bottom: 25px;
  text-align: center;
 }
+/*RESPONSIVENESS STYLING START HERE*/
+@media (max-width: 576px) {
+ /* Styles for mobile phones */
+ .category-cont {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 50px;
+ }
+ .cattitle {
+  font-size: 40px;
+  margin-bottom: 25px;
+  text-align: center;
+ }
+}

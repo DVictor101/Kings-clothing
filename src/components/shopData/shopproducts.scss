@@ -49,3 +49,36 @@
   }
  }
 }
+
+/* Styles for mobile phones */
+@media (max-width: 576px) {
+ /* Styles for mobile phones */
+ .shop-products {
+  height: 480px;
+  padding: 20px 0;
+ }
+ .footer {
+  font-size: 20px;
+  height: 5%;
+ }
+ .name {
+  width: 100%;
+  margin-bottom: 25px;
+ }
+}
+@media (min-width: 577px) and (max-width: 767px) {
+ /* Styles for small tablets and larger phones */
+ .shop-products {
+  height: 480px;
+  padding: 20px 0;
+  margin: 0 30px
+ }
+ .footer {
+  font-size: 20px;
+  height: 5%;
+ }
+ .name {
+  width: 100%;
+  margin-bottom: 25px;
+ }
+}

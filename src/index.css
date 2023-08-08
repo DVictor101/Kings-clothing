@@ -10,3 +10,19 @@ a {
 * {
  box-sizing: border-box;
 }
+/*RESPONSIVENESS STYLING START HERE*/
+@media (max-width: 576px) {
+ /* Styles for mobile phones */
+ body {
+  padding: 20px;
+ }
+}
+@media (min-width: 577px) and (max-width: 767px) {
+ /* Styles for small tablets and larger phones */
+ body {
+  padding: 30px, 40px;
+ }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Styles for tablets and small laptops */
+}

@@ -4,3 +4,28 @@
  width: 900px;
  margin: 30px auto;
 }
+/*RESPONSIVENESS STYLING START HERE*/
+@media (max-width: 576px) {
+    /* Styles for mobile phones */
+    .reg-cont {
+        flex-direction: column;
+        width: 100vw;
+       }
+   }
+   @media (min-width: 577px) and (max-width: 767px) {
+    /* Styles for small tablets and larger phones */
+    .reg-cont {
+        flex-direction: column;
+        width: 100vw;
+        margin: 0 30px;
+       }
+   }
+   @media (min-width: 768px) and (max-width: 991px) {
+       /* Styles for tablets and small laptops */
+       .reg-cont {
+        flex-direction: column;
+        width: 100vw;
+        padding: 0 30px;
+       }
+   }
+   

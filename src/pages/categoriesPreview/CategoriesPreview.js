@@ -1,3 +1,5 @@
+import "./categoriespreview.scss";
+
 import { useContext, Fragment } from "react";
 import { ShopDataContext } from "../../context/ShotDataContext";
 import CategoryPreview from "../../components/categoryPreview/categoryPreview";
@@ -12,7 +14,7 @@ const CategoriesPreview = () => {
     const products = shopDatasMap[title];
 
     return (
-     <CategoryPreview
+     <CategoryPreview className="cat-preview"
       key={title}
       title={title}
       products={products}
