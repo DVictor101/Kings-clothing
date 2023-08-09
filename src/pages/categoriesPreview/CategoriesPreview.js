@@ -14,7 +14,8 @@ const CategoriesPreview = () => {
     const products = shopDatasMap[title];
 
     return (
-     <CategoryPreview className="cat-preview"
+     <CategoryPreview
+      className="cat-preview"
       key={title}
       title={title}
       products={products}

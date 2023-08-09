@@ -21,7 +21,7 @@ const CategoryList = () => {
   setProducts(shopDatasMap[categorylist]);
  }, [categorylist, shopDatasMap]);
  return (
-  <Fragment>
+  <Fragment className="fragment">
    <h2 className="cattitle">{categorylist.toUpperCase()}</h2>
    <div className="category-cont">
     {products &&

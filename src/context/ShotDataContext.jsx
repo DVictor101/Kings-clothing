@@ -20,7 +20,6 @@ export const ShopDataProvider = ({
   const getCategoryMap = async () => {
    const categoryMap =
     await getCategoryAndDocument();
-   console.log(categoryMap);
    setShopDatasMap(categoryMap);
   };
   getCategoryMap();

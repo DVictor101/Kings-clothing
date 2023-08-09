@@ -12,6 +12,9 @@
 /*RESPONSIVENESS STYLING START HERE*/
 @media (max-width: 576px) {
  /* Styles for mobile phones */
+ .fragment {
+  margin: 0 100px !important;
+ }
  .category-cont {
   display: flex;
   flex-direction: column;

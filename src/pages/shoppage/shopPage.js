@@ -1,8 +1,9 @@
+import "./shoppage.scss";
 import Shop from "../../components/shop/shop";
 
 const ShopPage = () => {
  return (
-  <div>
+  <div className="shoppage">
    <Shop />
   </div>
  );
